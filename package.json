@@ -1,6 +1,6 @@
 {
   "name": "kinopoisk-bot",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Telegram inline bot for kinopoisk search",
   "main": "src/index.js",
   "scripts": {
