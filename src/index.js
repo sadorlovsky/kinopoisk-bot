@@ -11,17 +11,21 @@ function search (query) {
   return fetch(`http://api.kinopoisk.cf/searchFilms?keyword=${params}`)
     .then(res => res.json())
     .then(json => json.searchFilms)
-    .then(movies => movies.map(movie => {
-      return {
-        id: movie.id,
-        type: 'article',
-        title: `${movie.nameRU} (${movie.year})`,
-        description: movie.description,
-        thumb_url: `http://st.kp.yandex.net/images/film_big/${movie.id}.jpg`,
-        message_text: `http://www.kinopoisk.ru/film/${movie.id}/`,
-        parse_mode: 'Markdown'
+    .then(movies => {
+      if (movies) {
+        return movies.map(movie => ({
+          id: movie.id,
+          type: 'article',
+          title: `${movie.nameRU} (${movie.year})`,
+          description: movie.description,
+          thumb_url: `http://st.kp.yandex.net/images/film_big/${movie.id}.jpg`,
+          message_text: `http://www.kinopoisk.ru/film/${movie.id}/`,
+          parse_mode: 'Markdown'
+        }))
+      } else {
+        return []
       }
-    }))
+    })
 }
 
 bot.on('inline_query', query => {
