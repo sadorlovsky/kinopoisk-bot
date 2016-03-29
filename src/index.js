@@ -17,7 +17,7 @@ function search (query) {
           id: movie.id,
           type: 'article',
           title: `${movie.nameRU} (${movie.year})`,
-          description: movie.description,
+          description: movie.description.replace(/\((.*)\)/, ' $&'),
           thumb_url: `http://st.kp.yandex.net/images/film_big/${movie.id}.jpg`,
           message_text: `http://www.kinopoisk.ru/film/${movie.id}/`,
           parse_mode: 'Markdown'
