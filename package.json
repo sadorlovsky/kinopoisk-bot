@@ -7,6 +7,9 @@
     "build": "babel src --out-dir dist",
     "start": "npm run build && node -r dotenv-safe/config dist/index.js"
   },
+  "engines": {
+    "node": ">=4.0.0"
+  },
   "author": "Zach Orlovsky <sadorlovsky@gmail.com>",
   "license": "MIT",
   "repository": {
