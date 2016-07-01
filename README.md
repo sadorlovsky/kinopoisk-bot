@@ -2,6 +2,6 @@
 
 Telegram inline bot for kinopoisk search.
 
-### License
+## License
 
-MIT
+MIT © [Zach Orlovsky](https://orlovsky.rocks)
