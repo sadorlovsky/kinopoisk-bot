@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
+    "clinton": "clinton",
     "start": "npm run build && node -r dotenv-safe/config dist/index.js"
   },
   "engines": {
