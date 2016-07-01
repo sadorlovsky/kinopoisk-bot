@@ -1,5 +1,5 @@
 {
-  "name": "kinopoisk-bot",
+  "name": "@sadorlovsky/kinopoisk-bot",
   "version": "0.1.3",
   "description": "Telegram inline bot for kinopoisk search",
   "main": "src/index.js",
